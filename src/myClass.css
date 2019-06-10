@@ -1,0 +1,106 @@
+.bigger {
+  font-size:300%;
+}
+
+.rating {
+  font-size:120%;
+  color: #ffbb00;
+}
+
+.par{
+  color: white;
+  font-family: "Arial", Times, serif;
+}
+
+.par a{
+  color: white;
+  font-family: "Arial", Times, serif;
+}
+
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #000066;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type=submit]:hover {
+  background-color: #000066;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 850px;
+  margin-left: 355px;
+}
+
+
+
+#menu {
+  overflow: hidden;
+  background-color: transparent;
+          /*lightblue;*/
+  width: 850px;
+  position: relative;
+  margin: 50px auto;
+  padding-top: 30px;
+}
+
+
+
+#menu a {
+  font-family: "Agency FB", serif;
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 60px;
+  text-decoration: none;
+  font-size: 17px;
+  border-left: 2px solid #000066;
+}
+
+#menu a:hover {
+  background-color: lightgrey;
+  color: black;
+  border-bottom: 3px #000066;
+}
+
+#menu a.active {
+  margin-top: -30px;
+  background-color: transparent;
+          /*cornflowerblue;*/
+  color: black;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
