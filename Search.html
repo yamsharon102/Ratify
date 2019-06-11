@@ -12,11 +12,11 @@
         {
             var arr = ["Ariana_Grande", "Imagine_Dragons", "JP_Cooper", "Khalid", "Maroon5", "Queen"];
 
-            divStr="<table border=1><tr><td>Artist Name</td><td>Link</td></tr>";
+            divStr="<table style='font-size: 200%; text-decoration: inherit'><tr><td align='center'><b>Artist Name</b></td></tr>";
             // var tmpArr = [];
             for(i=0;i<arr.length;i++)
                 if (arr[i].toLowerCase().includes(range.toLowerCase()))
-                    divStr+="<tr><td>" + "<a style='color: white' href=\"Artist.html?name="+arr[i]+"\">"+arr[i]+"</a>" + "</td>" + "</tr>";
+                    divStr+="<tr><td align='center' style='font-family: 'Agency FB''>" + "<a style='color: white; font-size: 70%; text-decoration: none' href=\"Artist.html?name="+arr[i]+"\">"+arr[i]+"</a>" + "</td>" + "</tr>";
 
             document.getElementById("divResult").innerHTML=divStr;
         }
@@ -83,7 +83,7 @@
     <!--</table>-->
 
 
-    <h2 style="margin-left: -50px; color: darkgoldenrod; font-family: 'Agency FB', serif;">TOP 3</h2>
+    <h2 style="margin-left: -50px; color: darkgoldenrod; font-family: 'Agency FB', serif; font-size: 300%">Recommended</h2>
 
     <table align="center" style="width: 850px; font-family: 'Agency FB'; color: white; font-size: 200%">
         <tr>
@@ -94,17 +94,17 @@
 
         <tr>
             <td><img src="imgs/Khalid.jpg" style="color: black" border="5" height="100" width="130"/></td>
-            <td align="center">Khalid</td>
+            <td align="center"> <a style='color: white; text-decoration: none' href="Artist.html?name=Khalid">Khalid</a></td>
             <td style="color: darkgoldenrod">4.8</td>
         </tr>
         <tr>
             <td><img src="imgs/Imagine_Dragons.jpg" style="color: black" border="5" height="100" width="130"/></td>
-            <td align="center">Imagine Dragons</td>
+            <td align="center"> <a style='color: white; text-decoration: none' href="Artist.html?name=Imagine_Dragons">Imagine Dragons</a></td>
             <td style="color: darkgoldenrod">4.6</td>
         </tr>
         <tr>
             <td><img src="imgs/Ariana_Grande.jpg" style="color: black" border="5" height="100" width="130"/></td>
-            <td align="center">Ariana Grande</td>
+            <td align="center"> <a style='color: white; text-decoration: none' href="Artist.html?name=Ariana_Grande">Ariana Grande</a></td>
             <td style="color: darkgoldenrod">4.5</td>
         </tr>
     </table>
