@@ -1,0 +1,171 @@
+.bigger {
+  font-size:300%;
+}
+
+.rating {
+  font-size:120%;
+  color: #ffbb00;
+}
+
+.par{
+  color: white;
+  font-family: "Agency FB", Times, serif;
+}
+
+.par a{
+  color: white;
+  font-family: "Agency FB", Times, serif;
+}
+
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #000066;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type=submit]:hover {
+  background-color: #000066;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 850px;
+}
+
+
+
+#menu {
+  overflow: hidden;
+  background-color: transparent;
+          /*lightblue;*/
+  width: 850px;
+  position: relative;
+  margin: 50px auto;
+  padding-top: 30px;
+}
+
+
+
+#menu a {
+  font-family: "Agency FB", serif;
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 60px;
+  text-decoration: none;
+  font-size: 17px;
+  border-left: 2px solid #000066;
+}
+
+#menu a:hover {
+  background-color: lightgrey;
+  color: black;
+  border-bottom: 3px #000066;
+}
+
+#menu a.active {
+  margin-top: -30px;
+  background-color: transparent;
+          /*cornflowerblue;*/
+  color: black;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.rating {
+  display: inline-block;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  font-size: 50px;
+}
+
+.rating label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  cursor: pointer;
+}
+
+.rating label:last-child {
+  position: static;
+}
+
+.rating label:nth-child(1) {
+  z-index: 5;
+}
+
+.rating label:nth-child(2) {
+  z-index: 4;
+}
+
+.rating label:nth-child(3) {
+  z-index: 3;
+}
+
+.rating label:nth-child(4) {
+  z-index: 2;
+}
+
+.rating label:nth-child(5) {
+  z-index: 1;
+}
+
+.rating label input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.rating label .icon {
+  float: left;
+  color: transparent;
+}
+
+.rating label:last-child .icon {
+  color: white;
+}
+
+.rating:not(:hover) label input:checked ~ .icon,
+.rating:hover label:hover input ~ .icon {
+  color: darkgoldenrod;
+}
+
+.rating label input:focus:not(:checked) ~ .icon:last-child {
+  color: white;
+  text-shadow: 0 0 5px darkgoldenrod;
+}

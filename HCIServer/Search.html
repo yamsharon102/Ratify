@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="src/myClass.css">
+    <link rel="stylesheet" type="text/css" href="src/Search.css">
+    <script src="src/js/code-analyzer.js"></script>
+    <script>
+
+
+        function factorialTable(range)
+        {
+            var arr = ["Ariana_Grande", "Imagine_Dragons", "JP_Cooper", "Khalid", "Maroon5", "Queen"];
+
+            divStr="<table style='font-size: 200%; text-decoration: inherit'><tr><td align='center'><b>Artist Name</b></td></tr>";
+            // var tmpArr = [];
+            for(i=0;i<arr.length;i++)
+                if (arr[i].toLowerCase().includes(range.toLowerCase()))
+                    divStr+="<tr><td align='center' style='font-family: 'Agency FB''>" + "<a style='color: white; font-size: 70%; text-decoration: none' href="+arr[i]+"\"Artist.html?name=\">"+arr[i]+"</a>" + "</td>" + "</tr>";
+
+            document.getElementById("divResult").innerHTML=divStr;
+        }
+        function getnputValue()
+        {
+            return document.getElementById("putName").value;
+        }
+    </script>
+</head>
+<body style="background-color: #000066">
+
+
+<div id="menu">
+    <a href="desktop/index.html" class="active">
+        <img src="../imgs/Picture1.png" height="120" width="115"/>
+    </a>
+    <a href="desktop/index.html" style="font-size:290%">Home</a>
+    <a href="Search.html" style="font-size:290%">Search</a>
+    <a href="Con&Ab.html" style="font-size:145%">Contact<br>& About</a>
+</div>
+
+
+<div align="center">
+    <!--<form name="parameters" method="GET" action="Artist.html" target="_parent">-->
+        <!--<p> Login:-->
+            <!--<input type="text" name="name" value="me">-->
+        <!--</p>-->
+        <!--<p> Password:-->
+            <!--<input type="text" name="password" value="123">-->
+        <!--</p>-->
+        <!--<p>-->
+            <!--<input type="submit" name="submit" value="Send data">-->
+        <!--</p>-->
+    <!--</form>-->
+
+    <form name="formname" onsubmit="return false" action="Artist.html" method="GET">
+        <td><input type="text" id="putName" placeholder="Search By Name.."></td>
+        <td>
+            <button class="button" style="vertical-align:middle" onclick="factorialTable(getnputValue())"><span>Search By Name</span></button>
+        </td>
+        <td style="color: white">
+            <div id="divResult" style="color: white">
+            </div>
+        </td>
+    </form>
+
+    <!--<table style="width: 850px">-->
+        <!--<tr>-->
+            <!--<td style="color: white; font-size: 150%">Search By Genre</td>-->
+            <!--<td>-->
+                <!--<div class="styled-select blue semi-square">-->
+                    <!--<select>-->
+                        <!--<option>Hard Rock</option>-->
+                        <!--<option>Pop Rock</option>-->
+                        <!--<option>Rock</option>-->
+                        <!--<option>Film Soundtrack</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<button class="button" style="vertical-align:middle"><span>Search By Genre</span></button>-->
+            <!--</td>-->
+        <!--</tr>-->
+    <!--</table>-->
+
+
+    <h2 style="margin-left: -50px; color: darkgoldenrod; font-family: 'Agency FB', serif; font-size: 300%">Recommended</h2>
+
+    <table align="center" style="width: 850px; font-family: 'Agency FB'; color: white; font-size: 200%">
+        <tr>
+            <td style="padding-left: 30px; width: 10px">Picture</td>
+            <td align="center">Artist</td>
+            <td>Rating</td>
+        </tr>
+
+        <tr>
+            <td><img src="../imgs/Khalid.jpg" style="color: black" border="5" height="100" width="130"/></td>
+            <td align="center"> <a style='color: white; text-decoration: none' href="Artist.html?name=Khalid">Khalid</a></td>
+            <td style="color: darkgoldenrod">4.8</td>
+        </tr>
+        <tr>
+            <td><img src="../imgs/Imagine_Dragons.jpg" style="color: black" border="5" height="100" width="130"/></td>
+            <td align="center"> <a style='color: white; text-decoration: none' href="Artist.html?name=Imagine_Dragons">Imagine Dragons</a></td>
+            <td style="color: darkgoldenrod">4.6</td>
+        </tr>
+        <tr>
+            <td><img src="imgs/Ariana_Grande.jpg" style="color: black" border="5" height="100" width="130"/></td>
+            <td align="center"> <a style='color: white; text-decoration: none' href="Artist.html?name=Ariana_Grande">Ariana Grande</a></td>
+            <td style="color: darkgoldenrod">4.5</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
