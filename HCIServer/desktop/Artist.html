@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="src/myClass.css">
     <link rel="stylesheet" type="text/css" href="src/Search.css">
     <script src="src/js/app.js"></script>
+    <script src="js/cookieMonster.js"></script>
 </head>
 <body style="background-color: #000066">
 
@@ -107,9 +108,6 @@
 
 <script language="JavaScript">
     var x = "";
-    var totalSum = [0, 0, 0, 0, 0, 0];
-    var totalVotes = [0, 0, 0, 0, 0, 0];
-
 
     function setArtistMap()
     {
@@ -170,7 +168,7 @@
         myMap.set("Imagine_Dragons", "Imagine Dragons");
         myMap.set("JP_Cooper", "JP Cooper");
         myMap.set("Khalid", "Khalid");
-        myMap.set("Maroon5", "Maroon 5");
+        myMap.set("Maroon5", "Maroon5");
         myMap.set("Queen","Queen");
 
         return myMap.get(l);
@@ -178,12 +176,12 @@
 
     function getRate(l) {
         var myMap = new Map();
-        myMap.set("Ariana_Grande", totalSum[0]/totalVotes[0] + "");
-        myMap.set("Imagine_Dragons", totalSum[1]/totalVotes[1] + "");
-        myMap.set("JP_Cooper", totalSum[2]/totalVotes[2] + "");
-        myMap.set("Khalid", totalSum[3]/totalVotes[3] + "");
-        myMap.set("Maroon5", totalSum[4]/totalVotes[4] + "");
-        myMap.set("Queen",totalSum[5]/totalVotes[5] + "");
+        myMap.set("Ariana_Grande", Math.ceil(read_cookie("Ariana Grande" + "Sum") / read_cookie("Ariana Grande" + "Votes")));
+        myMap.set("Imagine_Dragons", Math.ceil(read_cookie("Imagine Dragons" + "Sum") / read_cookie("Imagine Dragons" + "Votes")));
+        myMap.set("JP_Cooper", Math.ceil(read_cookie("JP Cooper" + "Sum") / read_cookie("JP Cooper" + "Votes")));
+        myMap.set("Khalid", Math.ceil(read_cookie("Khalid" + "Sum") / read_cookie("Khalid" + "Votes")));
+        myMap.set("Maroon5", Math.ceil(read_cookie("Maroon5" + "Sum") / read_cookie("Maroon5" + "Votes")));
+        myMap.set("Queen", Math.ceil(read_cookie("Queen" + "Sum") / read_cookie("Queen" + "Votes")));
 
         return myMap.get(l);
     }
@@ -230,20 +228,18 @@
 
         var temp = parameters[0].split("=");
         l = unescape(temp[1]);
-        var artistMap = setArtistMap();
-        var thisArt = artistMap.get(l);
-        var x = -1;
-        getName(l) == "Ariana Grande" ? x = 0 :
-            getName(l) == "Imagine Dragons" ? x = 1:
-                getName(l) == "JP Cooper" ? x = 2:
-                    getName(l) == "Khalid" ? x = 3:
-                    getName(l) == "Maroon5" ? x = 4:
-                    getName(l) == "Queen" ? x = 5 : x ;
-        document.getElementById("star1").checked ? updateRate(x, 1) :
-        document.getElementById("star2").checked ? updateRate(x, 2) :
-        document.getElementById("star3").checked ? updateRate(x, 3) :
-        document.getElementById("star4").checked ? updateRate(x, 4) :
-        document.getElementById("star5").checked ? updateRate(x, 5) : console.log(getName(l));
+        document.getElementById("star1").checked ? updateRate(getName(l), 1) :
+        document.getElementById("star2").checked ? updateRate(getName(l), 2) :
+        document.getElementById("star3").checked ? updateRate(getName(l), 3) :
+        document.getElementById("star4").checked ? updateRate(getName(l), 4) :
+        document.getElementById("star5").checked ? updateRate(getName(l), 5) : console.log(getName(l));
+    }
+
+    function updateRate(x, sum){
+        write_cookie(x + "Sum", (+read_cookie(x + "Sum")) + sum);
+        write_cookie(x + "Votes", (+read_cookie(x + "Votes")) + 1);
+        console.log(read_cookie(x + "Sum"));
+        console.log(x);
     }
 
 
