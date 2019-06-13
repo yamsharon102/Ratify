@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="src/myClass.css">
     <link rel="stylesheet" type="text/css" href="src/Search.css">
     <script src="src/js/code-analyzer.js"></script>
+    <script src="js/cookieMonster.js"></script>
     <script>
 
 
@@ -84,7 +85,6 @@
 
 
     <h2 style="margin-left: -50px; color: darkgoldenrod; font-family: 'Agency FB', serif; font-size: 300%">Recommended</h2>
-
     <table align="center" style="width: 850px; font-family: 'Agency FB'; color: white; font-size: 200%">
         <tr>
             <td style="padding-left: 30px; width: 10px">Picture</td>
@@ -111,7 +111,9 @@
 </div>
 
 <script>
-
+    document.getElementById("khalidRate").innerText = "" + Math.ceil(read_cookie("Khalid" + "Sum") / read_cookie("Khalid" + "Votes"));
+    document.getElementById("imagineRate").innerText = "" + Math.ceil(read_cookie("Imagine Dragons" + "Sum") / read_cookie("Imagine Dragons" + "Votes"));
+    document.getElementById("arianaRate").innerText = "" + Math.ceil(read_cookie("Ariana Grande" + "Sum") / read_cookie("Ariana Grande" + "Votes"));
 </script>
 </body>
 </html>
