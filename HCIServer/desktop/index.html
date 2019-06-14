@@ -77,8 +77,8 @@
     </table>
 </div>
 <script>
-    document.getElementById("queenRate").innerText = "Rate = " + Math.ceil(read_cookie("Queen" + "Sum") / read_cookie("Queen" + "Votes"));
-    document.getElementById("maroon5Rate").innerText = "Rate = " + Math.ceil(read_cookie("Maroon5" + "Sum") / read_cookie("Maroon5" + "Votes"));
+    document.getElementById("queenRate").innerText = "Rate = " + read_cookie("Queen" + "Sum") / read_cookie("Queen" + "Votes");
+    document.getElementById("maroon5Rate").innerText = "Rate = " + read_cookie("Maroon5" + "Sum") / read_cookie("Maroon5" + "Votes");
 </script>
 
 </body>

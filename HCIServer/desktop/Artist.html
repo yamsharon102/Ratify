@@ -176,12 +176,12 @@
 
     function getRate(l) {
         var myMap = new Map();
-        myMap.set("Ariana_Grande", Math.ceil(read_cookie("Ariana Grande" + "Sum") / read_cookie("Ariana Grande" + "Votes")));
-        myMap.set("Imagine_Dragons", Math.ceil(read_cookie("Imagine Dragons" + "Sum") / read_cookie("Imagine Dragons" + "Votes")));
-        myMap.set("JP_Cooper", Math.ceil(read_cookie("JP Cooper" + "Sum") / read_cookie("JP Cooper" + "Votes")));
-        myMap.set("Khalid", Math.ceil(read_cookie("Khalid" + "Sum") / read_cookie("Khalid" + "Votes")));
-        myMap.set("Maroon5", Math.ceil(read_cookie("Maroon5" + "Sum") / read_cookie("Maroon5" + "Votes")));
-        myMap.set("Queen", Math.ceil(read_cookie("Queen" + "Sum") / read_cookie("Queen" + "Votes")));
+        myMap.set("Ariana_Grande", read_cookie("Ariana Grande" + "Sum") / read_cookie("Ariana Grande" + "Votes"));
+        myMap.set("Imagine_Dragons", read_cookie("Imagine Dragons" + "Sum") / read_cookie("Imagine Dragons" + "Votes"));
+        myMap.set("JP_Cooper", read_cookie("JP Cooper" + "Sum") / read_cookie("JP Cooper" + "Votes"));
+        myMap.set("Khalid", read_cookie("Khalid" + "Sum") / read_cookie("Khalid" + "Votes"));
+        myMap.set("Maroon5", read_cookie("Maroon5" + "Sum") / read_cookie("Maroon5" + "Votes"));
+        myMap.set("Queen", read_cookie("Queen" + "Sum") / read_cookie("Queen" + "Votes"));
 
         return myMap.get(l);
     }
